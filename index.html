@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ASTROVITAL | NASA HRP Deep-Space Medical Command HUD</title>
+    <title>ASTROVITAL v5.0 | NASA HRP Deep-Space Medical Command HUD</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -161,7 +161,7 @@
                 <div>
                     <div class="flex items-center space-x-2">
                         <h1 class="font-orbitron font-black text-lg sm:text-xl tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-300 to-violet-400 argon-glow">
-                            ARGON <span class="text-cyan-400 font-light">//</span> ASTROVITAL
+                            ASTROVITAL
                         </h1>
                         <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/40 font-semibold">
                             v5.0 NASA-STD-3001
@@ -803,7 +803,7 @@
     <!-- ================= FOOTER ================= -->
     <footer class="bg-argon-950 border-t border-slate-800/90 py-3 px-6 text-center text-[11px] text-slate-400 mt-auto">
         <div class="max-w-[1650px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-            <p><strong class="text-cyan-300 font-orbitron">ARGON // ASTROVITAL v5.0</strong> • 2026 NASA Space Apps Challenge (Health Monitoring Software for Astronauts)</p>
+            <p><strong class="text-cyan-300 font-orbitron">ASTROVITAL v5.0</strong> • 2026 NASA Space Apps Challenge (Health Monitoring Software for Astronauts)</p>
             <p class="font-mono text-[10px] text-slate-500">Data Standards: NASA-STD-3001 • NASA Human Research Program (HRP) • NASA OSDR / GeneLab</p>
         </div>
     </footer>
@@ -949,7 +949,7 @@
                 tag: 'HAZARD 3 // AUTONOMOUS MEDICAL COMMAND',
                 std: 'Mars OWLT Delay: Up to 22m One-Way (44m Round-Trip)',
                 title: '3. Distance from Earth & Communication Blackouts',
-                desc: 'Real-time surgical guidance from Houston is impossible in deep space. ARGON executes local AI ultrasound triage and ExMC pharmacy dispensing autonomously.',
+                desc: 'Real-time surgical guidance from Houston is impossible in deep space. ASTROVITAL executes local AI ultrasound triage and ExMC pharmacy dispensing autonomously.',
                 action: 'Store-and-Forward AES-256 Telemetry Burst via Deep Space Network'
             },
             gravity: {
@@ -1096,7 +1096,7 @@
                 state.zones = { neuro: 'normal', cardio: 'normal', pulmo: 'normal', immune: 'normal', musculo: 'normal' };
                 document.getElementById('oscRhythm').innerText = 'BPM • SINUS';
                 selectBodyPart('neuro');
-                appendMccLog('ARGON-AI', 'All crew physiological metrics restored to NASA-STD-3001 nominal flight corridor.', 'optimal');
+                appendMccLog('ASTROVITAL-AI', 'All crew physiological metrics restored to NASA-STD-3001 nominal flight corridor.', 'optimal');
                 showToast('Nominal Scenario Active', 'All 5 anatomical nodes nominal.', 'info');
             } 
             else if (key === 'sans') {
@@ -1104,7 +1104,7 @@
                 state.zones = { neuro: 'crit', cardio: 'warn', pulmo: 'warn', immune: 'normal', musculo: 'normal' };
                 document.getElementById('oscRhythm').innerText = 'BPM • ELEVATED ICP';
                 selectBodyPart('neuro');
-                appendMccLog('ARGON-TRIAGE', 'SANS ALERT: Optic Nerve Sheath Diameter 6.2 mm + Cabin ppCO₂ pocket (4.1 mmHg). Initiating LBNP vacuum suit & CDRA scrubber boost.', 'warn');
+                appendMccLog('ASTROVITAL-TRIAGE', 'SANS ALERT: Optic Nerve Sheath Diameter 6.2 mm + Cabin ppCO₂ pocket (4.1 mmHg). Initiating LBNP vacuum suit & CDRA scrubber boost.', 'warn');
                 showToast('SANS & CO₂ Anomaly Injected', 'Ocular ONSD 6.2mm & elevated CO₂ flagged.', 'warn');
             }
             else if (key === 'spe') {
@@ -1178,7 +1178,7 @@
             showToast('Telemetry Packet Queued', `Message propagating at speed of light (${owlt}).`, 'info');
 
             setTimeout(() => {
-                appendMccLog('MCC-HOUSTON FLIGHT SURGEON (AUTO-ACK)', `Packet verified by JSC Bioastronautics Console. Continue ARGON autonomous countermeasure protocol; updated prescription uplinked.`, 'optimal');
+                appendMccLog('MCC-HOUSTON FLIGHT SURGEON (AUTO-ACK)', `Packet verified by JSC Bioastronautics Console. Continue ASTROVITAL autonomous countermeasure protocol; updated prescription uplinked.`, 'optimal');
             }, 2200);
         }
 
